@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "002791f0-09c2-4771-b295-aa07eb5c1e54",
+		"name": "Dewi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23649954"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Dewww\",\r\n    \"password\" : \"dewi12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/register",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Dewww\",\r\n    \"password\" : \"dewi12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/login",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/products",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/products/1",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"HP\",\r\n    \"description\": \"RAM 12/526\",\r\n    \"price\": 3000000,\r\n    \"category_id\": 4,\r\n    \"supplier_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/products",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"HP\",\r\n    \"description\": \"RAM 12/526\",\r\n    \"price\": 3500000,\r\n    \"category_id\": 4,\r\n    \"supplier_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/products/22",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"products",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/products/22",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"products",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/categories",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategoryByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/categories/5",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Gaming\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/categories",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Game\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/categories/12",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"categories",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/categories/12",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"categories",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "GetSupplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/suppliers",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSupplierByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/suppliers/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"suppliers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostSupplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Rezz\",\r\n    \"Email\" : \"rez@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/suppliers",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutSupplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Rezz\",\r\n    \"Email\" : \"rezz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/suppliers/9",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"suppliers",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSupplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA4NzI3OTksInVzZXJfaWQiOjE5fQ.tFoE6ez1GN-SeH-WgVsE76fYFPmMJIMcppnlNoFjVwg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220002/api/v1/suppliers/9",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220002",
+								"api",
+								"v1",
+								"suppliers",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
